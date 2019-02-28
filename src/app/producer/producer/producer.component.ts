@@ -33,9 +33,11 @@ export class ProducerComponent implements OnInit {
       )
     ).pipe(
       map(([name, chainStatus, producers, account]) => {
+        console.log('producers:', producers);
         const producer = producers.find(producer => producer.owner === name);
         const index = producers.findIndex(producer => producer.owner === name);
         const votesToRemove = producers.reduce((acc, cur) => {
+          console.log(acc, cur);
           const percentageVotes = cur.total_votes / chainStatus.total_producer_vote_weight * 100;
           if (percentageVotes * 200 < 100) {
             acc += parseFloat(cur.total_votes);
