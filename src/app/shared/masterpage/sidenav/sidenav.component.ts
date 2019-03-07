@@ -25,27 +25,45 @@ export class SidenavComponent implements OnInit {
       {
         icon: 'dashboard',
         link: '/',
-        name: this.translate.instant('Dashboard')
+        name: '多面板'
       },
       {
         icon: 'gavel',
         link: '/producers',
-        name: this.translate.instant('Producers')
+        name: '节点列表'
       },
       {
         icon: 'link',
         link: '/blocks',
-        name: this.translate.instant('Blocks')
+        name: '区块列表'
       },
       {
         icon: 'list_alt',
         link: '/transactions',
-        name: this.translate.instant('Transactions')
+        name: '交易列表'
+      },
+      {
+        icon: 'how_to_vote',
+        external: true,
+        link: environment.votingUrl,
+        name: '智能合约'
+      },
+      {
+        icon: 'account_balance_wallet',
+        external: true,
+        link: environment.walletUrl,
+        name: '钱包'
+      },
+      {
+        icon: 'how_to_vote',
+        external: true,
+        link: environment.votingUrl,
+        name: '各种应用'
       },
       {
         icon: 'settings',
         link: '/settings',
-        name: this.translate.instant('Settings')
+        name: '设置'
       }
     ];
   }
