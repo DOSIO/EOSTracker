@@ -44,20 +44,17 @@ export class SidenavComponent implements OnInit {
       },
       {
         icon: 'how_to_vote',
-        external: true,
-        link: environment.votingUrl,
+        link: '/transactions',
         name: '智能合约'
       },
       {
         icon: 'account_balance_wallet',
-        external: true,
-        link: environment.walletUrl,
+        link: '/transactions',
         name: '钱包'
       },
       {
         icon: 'how_to_vote',
-        external: true,
-        link: environment.votingUrl,
+        link: '/transactions',
         name: '各种应用'
       },
       {
