@@ -53,6 +53,11 @@ export class SidenavComponent implements OnInit {
         name: '钱包'
       },
       {
+        icon: 'account_balance_wallet',
+        link: '/producers',
+        name: '节点'
+      },
+      {
         icon: 'how_to_vote',
         link: '/transactions',
         name: '各种应用'
