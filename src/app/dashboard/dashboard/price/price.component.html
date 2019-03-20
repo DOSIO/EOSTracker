@@ -20,21 +20,21 @@
             <td>{{usd.market_cap/ 1000000000 | currency:'USD':'symbol'}}B USD</td>
           </tr>
           <tr>
-            <td>% 1小时波动</td>
+            <td>1小时波动</td>
             <td>
               {{usd.percent_change_1h / 100 | percent:'1.2'}}
               <app-price-trending [percentage]="usd.percent_change_1h"></app-price-trending>
             </td>
           </tr>
           <tr>
-            <td>% 24小时波动</td>
+            <td>24小时波动</td>
             <td>
               {{usd.percent_change_24h / 100 | percent:'1.2'}}
               <app-price-trending [percentage]="usd.percent_change_24h"></app-price-trending>
             </td>
           </tr>
           <tr>
-            <td>% 7天波动</td>
+            <td>7天波动</td>
             <td>
               {{usd.percent_change_7d / 100 | percent:'1.2'}}
               <app-price-trending [percentage]="usd.percent_change_7d"></app-price-trending>
