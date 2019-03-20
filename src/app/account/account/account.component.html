@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <h1 class="mat-headline">
-    {{ 'Account' | translate }} {{name$ | async}}
+    {{ '账号:' | translate }} {{name$ | async}}
   </h1>
 </mat-toolbar>
 <ng-container *ngIf="account$ | async as account; else loading">
@@ -18,21 +18,21 @@
       <mat-tab>
         <ng-template mat-tab-label>
           <mat-icon style="margin-right:5px;">list</mat-icon>
-          {{ 'Actions' | translate }}
+          {{ '活动' | translate }}
         </ng-template>
         <app-account-actions [actions]="accountActions$ | async" [newActions]="accountNewActions$ | async" (onLoadMore)="loadMore($event)"></app-account-actions>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
           <mat-icon style="margin-right:5px;">code</mat-icon>
-          {{ 'BlockchainRawData' | translate }}
+          {{ '区块原始数据' | translate }}
         </ng-template>
         <prettyjson [obj]="account.value"></prettyjson>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
           <mat-icon style="margin-right:5px;">code</mat-icon>
-          {{ 'Contract' | translate }}
+          {{ '智能合约' | translate }}
         </ng-template>
         <ng-template matTabContent>
           <div *ngIf="(accountAbi$ | async) as abi; else loading">

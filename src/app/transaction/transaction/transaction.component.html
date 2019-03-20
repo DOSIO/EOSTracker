@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <h1 class="mat-headline">
-    {{ 'Transaction' | translate }}
+    {{ '交易' | translate }}
   </h1>
 </mat-toolbar>
 <ng-container *ngIf="transaction$ | async as transaction; else loading">
@@ -8,14 +8,14 @@
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon style="margin-right:5px;">info</mat-icon>
-        {{ 'Transaction Information' | translate }}
+        {{ '交易信息' | translate }}
       </ng-template>
       <app-transaction-information [transaction]="transaction.value"></app-transaction-information>
     </mat-tab>
     <mat-tab>
       <ng-template mat-tab-label>
         <mat-icon style="margin-right:5px;">code</mat-icon>
-        {{ 'BlockchainRawData' | translate }}
+        {{ '区块原始数据' | translate }}
       </ng-template>
       <div style="margin:10px;">
         <ngx-json-viewer [json]="transaction.value" [expanded]="true"></ngx-json-viewer>

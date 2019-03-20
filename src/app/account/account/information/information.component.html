@@ -1,16 +1,16 @@
 <div style="margin:10px;">
   <mat-card>
     <mat-card-title>
-      {{ 'Account Information' | translate }}
+      {{ '账号信息' | translate }}
     </mat-card-title>
     <mat-card-content class="table-container">
       <table>
         <tr>
-          <td>{{ 'Account Name' | translate }}:</td>
+          <td>{{ '账号名' | translate }}:</td>
           <td>{{account.account_name}}</td>
         </tr>
         <tr>
-          <td>{{ 'Created' | translate }}:</td>
+          <td>{{ '创建者' | translate }}:</td>
           <td>{{account.created | amFromUtc | date:'medium'}}</td>
         </tr>
         <!-- <tr>
@@ -18,7 +18,7 @@
           <td>{{account.last_code_update | amFromUtc | date:'medium'}}</td>
         </tr> -->
         <tr *ngIf="account.core_liquid_balance">
-          <td>{{ 'Balance' | translate }}:</td>
+          <td>{{ '余额' | translate }}:</td>
           <td>{{account.core_liquid_balance}}</td>
         </tr>
         <!-- <tr *ngIf="account.tokens.length">
@@ -28,7 +28,7 @@
           </td>
         </tr> -->
         <tr *ngIf="account.ram_quota > 0 && ramQuote">
-          <td>{{ 'RAM' | translate }}:</td>
+          <td>{{ '内存' | translate }}:</td>
           <td>
             <div style="padding:10px 0;">
               Staked: {{account.ram_quota * ramQuote.price | number:'1.0-4'}} EOS
@@ -49,7 +49,7 @@
           </td>
         </tr>
         <tr *ngIf="account.net_weight > 0">
-          <td>{{ 'NET' | translate }}:</td>
+          <td>{{ '网络' | translate }}:</td>
           <td>
             <div style="padding:10px 0;">
               Staked: {{account.total_resources?.net_weight}}
@@ -60,7 +60,7 @@
           </td>
         </tr>
         <tr *ngIf="balance">
-          <td>{{ 'Value' | translate }}:</td>
+          <td>{{ '数值' | translate }}:</td>
           <td>
             <div style="padding:10px 0;">
               Balance: {{this.balance.liquid | number:'1.0-4'}} EOS

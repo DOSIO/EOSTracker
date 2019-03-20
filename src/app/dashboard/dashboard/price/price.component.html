@@ -8,33 +8,33 @@
       <table>
         <ng-container *ngIf="price.quotes?.USD as usd">
           <tr>
-            <td>Price</td>
+            <td>当前价格</td>
             <td>{{usd.price | currency:'USD'}} USD</td>
           </tr>
           <tr>
-            <td>Volume 24h</td>
+            <td>24小时成交量</td>
             <td>{{usd.volume_24h / 1000000 | currency:'USD':'symbol':'1.0-0'}}M USD</td>
           </tr>
           <tr>
-            <td>Market Cap</td>
+            <td>24小时均价</td>
             <td>{{usd.market_cap/ 1000000000 | currency:'USD':'symbol'}}B USD</td>
           </tr>
           <tr>
-            <td>% Change 1h</td>
+            <td>% 1小时波动</td>
             <td>
               {{usd.percent_change_1h / 100 | percent:'1.2'}}
               <app-price-trending [percentage]="usd.percent_change_1h"></app-price-trending>
             </td>
           </tr>
           <tr>
-            <td>% Change 24h</td>
+            <td>% 24小时波动</td>
             <td>
               {{usd.percent_change_24h / 100 | percent:'1.2'}}
               <app-price-trending [percentage]="usd.percent_change_24h"></app-price-trending>
             </td>
           </tr>
           <tr>
-            <td>% Change 7d</td>
+            <td>% 7天波动</td>
             <td>
               {{usd.percent_change_7d / 100 | percent:'1.2'}}
               <app-price-trending [percentage]="usd.percent_change_7d"></app-price-trending>
@@ -42,11 +42,11 @@
           </tr>
         </ng-container>
         <tr>
-          <td>Circulating Supply</td>
+          <td>流通总量</td>
           <td>{{price.circulating_supply | number}} {{token}}</td>
         </tr>
         <tr>
-          <td>Total Supply</td>
+          <td>总量</td>
           <td>{{price.total_supply | number}} {{token}}</td>
         </tr>
       </table>
