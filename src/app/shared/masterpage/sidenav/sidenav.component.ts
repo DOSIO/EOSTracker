@@ -44,7 +44,7 @@ export class SidenavComponent implements OnInit {
       },
       {
         icon: 'how_to_vote',
-        link: '/transactions',
+        link: '/contracts',
         name: '智能合约'
       },
       {
@@ -61,6 +61,11 @@ export class SidenavComponent implements OnInit {
         icon: 'how_to_vote',
         link: '/transactions',
         name: '各种应用'
+      },
+      {
+        icon: 'how_to_vote',
+        link: '/transactions',
+        name: '区块链商城'
       },
       {
         icon: 'settings',
