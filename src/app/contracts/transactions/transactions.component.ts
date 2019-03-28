@@ -27,6 +27,7 @@ export class TransactionsComponent implements OnInit {
     );
     this.blocks$ = this.appService.getBlocks(this.pageIndex, this.pageSize).pipe(
       tap(blocks => {
+        console.log('blocks[0]:', blocks[0]);
         this.total = blocks[0].block_num;
       })
     );
@@ -40,6 +41,8 @@ export class TransactionsComponent implements OnInit {
 }
 
 const DEFAULT_HEADERS = [
+  'contracts',
+  'name',
   'id',
   'cpu',
   'net',
