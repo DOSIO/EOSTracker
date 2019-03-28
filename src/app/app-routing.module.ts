@@ -20,6 +20,7 @@ const appRoutes: Routes = [
       { path: 'producers', loadChildren: './producer/producer.module#ProducerModule' },
       { path: 'transactions', loadChildren: './transaction/transaction.module#TransactionModule' },
       { path: 'contracts', loadChildren: './contracts/transaction.module#TransactionModule' },
+      { path: 'apply', loadChildren: './apply/transaction.module#TransactionModule' },
       { path: 'console', loadChildren: './console/console.module#ConsoleModule' },
       { path: 'support', loadChildren: './support/support.module#SupportModule' }
     ]
