@@ -21,6 +21,7 @@ const appRoutes: Routes = [
       { path: 'transactions', loadChildren: './transaction/transaction.module#TransactionModule' },
       { path: 'contracts', loadChildren: './contracts/transaction.module#TransactionModule' },
       { path: 'apply', loadChildren: './apply/transaction.module#TransactionModule' },
+      { path: 'market', loadChildren: './market/transaction.module#TransactionModule' },
       { path: 'console', loadChildren: './console/console.module#ConsoleModule' },
       { path: 'support', loadChildren: './support/support.module#SupportModule' }
     ]

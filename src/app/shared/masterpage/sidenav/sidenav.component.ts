@@ -64,7 +64,7 @@ export class SidenavComponent implements OnInit {
       },
       {
         icon: 'view_module',
-        link: '/transactions',
+        link: '/market',
         name: '区块链商城'
       },
       {
