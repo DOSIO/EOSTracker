@@ -12,7 +12,8 @@ export class MasterpageComponent implements OnInit {
 
   sidenavMode$: Observable<string> = of('over');
   sidenavOpen$: Observable<boolean> = of(false);
-
+  console.log(location.href)
+  navHeaderShow=true;
   constructor(
     private breakpointObserver: BreakpointObserver,
   ) { }
@@ -30,6 +31,20 @@ export class MasterpageComponent implements OnInit {
     ]).pipe(
       map(result => result.matches ? false : true)
     );
+
+    if(location.href.indexOf("mobile=true")!=-1){
+      this.navHeaderShow=false;
+    }
+  }
+
+  navHeaderShowsetStyle(){
+    if(this.navHeaderShow){
+      return {}
+    }else{
+      return{
+        'padding-top':'0'
+      }
+    }
   }
 
 }

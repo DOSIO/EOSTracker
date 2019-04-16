@@ -49,12 +49,12 @@ export class SidenavComponent implements OnInit {
       },
       {
         icon: 'account_balance_wallet',
-        link: '/transactions',
+        link: '/wallet',
         name: '钱包'
       },
       {
         icon: 'business',
-        link: '/producers',
+        link: '/producer',
         name: '节点'
       },
       {
