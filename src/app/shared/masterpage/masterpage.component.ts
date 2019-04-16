@@ -12,7 +12,6 @@ export class MasterpageComponent implements OnInit {
 
   sidenavMode$: Observable<string> = of('over');
   sidenavOpen$: Observable<boolean> = of(false);
-  console.log(location.href)
   navHeaderShow=true;
   constructor(
     private breakpointObserver: BreakpointObserver,
